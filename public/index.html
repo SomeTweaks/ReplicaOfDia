@@ -153,7 +153,7 @@ main::-webkit-scrollbar{display:none}
 .me p{margin:0;font-size:13px;color:#33453B;font-weight:500}
 .me ~ .rows{margin-left:28px;margin-right:28px}
 
-.stage{position:relative;display:flex;justify-content:center;align-items:center;min-height:100%;padding:var(--card-top) var(--card-mx) var(--card-bottom)}
+{position:relative;display:flex;justify-content:center;align-items:center;min-height:100%;padding:var(--card-top) var(--card-mx) var(--card-bottom)}
 .card{position:relative;width:var(--card-w);max-width:none;min-height:var(--card-h);margin:0 auto;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;transform:scale(var(--card-scale));transform-origin:center center;background:linear-gradient(180deg,rgba(233,242,249,var(--card-alpha)) 0%,rgba(232,244,234,var(--card-alpha)) 100%);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);box-shadow:0 22px 46px -24px rgba(12,32,22,.45),inset 0 0 0 1px rgba(255,255,255,.65);color:var(--tx)}
 
 nav,.nav,.tabs,.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:space-around;align-items:center;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,.6)}
@@ -393,10 +393,11 @@ html, body {
 }
 /* ===== КАРУСЕЛЬ ДОКУМЕНТІВ З ЕФЕКТОМ ВІДДАЛЕННЯ ===== */
 .stage {
-  padding-top: 96px !important;
+  padding-top: 114px !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
 .doc-carousel {
   display: flex !important;
   flex-direction: row !important;
