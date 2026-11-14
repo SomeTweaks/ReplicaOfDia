@@ -337,6 +337,7 @@ html, body {
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.3, 0.85, 0.35, 1) !important;
   cursor: pointer;
+            min-height: clamp(455px, 63.5dvh, 565px) !important;
 }
 
 .card.flipped {
@@ -392,9 +393,10 @@ html, body {
 }
 /* ===== КАРУСЕЛЬ ДОКУМЕНТІВ З ЕФЕКТОМ ВІДДАЛЕННЯ ===== */
 .stage {
-  perspective: 1200px;
+  padding-top: 102px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
-
 .doc-carousel {
   display: flex !important;
   flex-direction: row !important;
