@@ -393,7 +393,7 @@ html, body {
 }
 /* ===== КАРУСЕЛЬ ДОКУМЕНТІВ З ЕФЕКТОМ ВІДДАЛЕННЯ ===== */
 .stage {
-  padding-top: 102px !important;
+  padding-top: 96px !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -429,11 +429,9 @@ html, body {
   transform: scale(0.91);
   opacity: 0.85;
 }
-
 .card {
-  width: 100% !important;
-  transition: transform 0.55s cubic-bezier(0.3, 0.85, 0.35, 1) !important;
-  cursor: pointer;
+  min-height: 430px !important;
+  height: clamp(435px, 60dvh, 520px) !important;
 }
 
 .card.flipped {
@@ -664,6 +662,34 @@ main { z-index: 2 !important; background: transparent !important; }
 }
 .name {
   font-size: 23px !important;
+}
+.stage {
+  padding-top: 96px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.card {
+  min-height: 430px !important;
+  height: clamp(435px, 60dvh, 520px) !important;
+}
+
+.gap {
+  min-height: 8px !important;
+  height: 8px !important;
+}
+
+.ctitle {
+  padding-top: 18px !important;
+}
+
+.grid {
+  padding-top: 12px !important;
+}
+
+.nameblock {
+  padding-top: 12px !important;
+  padding-bottom: 18px !important;
 }
 
 
