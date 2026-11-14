@@ -696,13 +696,26 @@ main { z-index: 2 !important; background: transparent !important; }
   padding-bottom: 18px !important;
 }
 /* 1. Трохи насиченіший блакитний фон */
+/* 1 і 4. Головний фон із насиченим блакитним верхом #5a8dd1 */
 .g-doc, .g-feed, .g-me {
-  background: linear-gradient(180deg, #7AA4D0 0%, #94B7DB 38%, #A9C6E0 72%, #B5CFE0 100%) !important;
+  background: linear-gradient(180deg, #5a8dd1 0%, #7ba7de 38%, #98bce4 72%, #aac7e4 100%) !important;
 }
 
-/* 2. Піднімаємо нижній таббар на 20px вище */
+/* 2. Висота чорної панелі збережена, але іконки опущені трохи нижче */
 .tabbar {
-  padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;
+  padding-top: 14px !important;
+  padding-bottom: calc(18px + env(safe-area-inset-bottom)) !important;
+}
+
+/* 3. Горизонтальний градієнт для біжучого рядка (зліва #b8e8a6 -> справа #a4cfce) */
+.valid {
+  background: linear-gradient(90deg, #b8e8a6 0%, #a4cfce 100%) !important;
+}
+.valid::before {
+  background: linear-gradient(90deg, #b8e8a6, transparent) !important;
+}
+.valid::after {
+  background: linear-gradient(90deg, transparent, #a4cfce) !important;
 }
 
 
