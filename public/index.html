@@ -720,6 +720,40 @@ main { z-index: 2 !important; background: transparent !important; }
 .card {
   background: linear-gradient(180deg, rgba(226, 238, 250, 0.77) 0%, rgba(224, 240, 236, 0.75) 48%, rgba(215, 236, 204, 0.77) 100%) !important;
 }
+/* 1. Поднимаем карточку выше на 10px (было 114px -> стало 104px) */
+.stage {
+  padding-top: 104px !important;
+}
+
+/* 2. Делаем карточку заметно прозрачнее */
+.card {
+  background: linear-gradient(180deg, rgba(226, 238, 250, 0.56) 0%, rgba(224, 240, 236, 0.54) 48%, rgba(215, 236, 204, 0.56) 100%) !important;
+  backdrop-filter: blur(26px) saturate(1.25) !important;
+  -webkit-backdrop-filter: blur(26px) saturate(1.25) !important;
+}
+
+/* 3. Делаем весь текст на карточке плотнее и жирнее (+2–3px визуального веса, как в оригинале) */
+.ctitle {
+  font-weight: 700 !important;
+  -webkit-text-stroke: 0.35px currentColor;
+}
+.lbl {
+  font-weight: 600 !important;
+  color: #1A2B22 !important;
+  -webkit-text-stroke: 0.25px currentColor;
+}
+.val {
+  font-weight: 800 !important;
+  -webkit-text-stroke: 0.35px currentColor;
+}
+.name {
+  font-weight: 600 !important;
+  -webkit-text-stroke: 0.35px currentColor;
+}
+.valid {
+  font-weight: 700 !important;
+  -webkit-text-stroke: 0.2px currentColor;
+}
 
 </style>
 
