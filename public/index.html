@@ -621,12 +621,14 @@ main { z-index: 2 !important; background: transparent !important; }
 .more { width: 32px !important; height: 32px !important; margin: 0 0 0 auto !important; }
 /* 1. Зменшений на 0.05 масштаб (~1.10x) і комфортна ширина без тиску сусідньої картки */
 .doc-carousel {
-  padding: 10px 14px 10px 18px !important;
-  gap: 14px !important;
+  padding: 10px 4.5% !important;
+  gap: 12px !important;
+  scroll-padding-inline: 4.5% !important;
 }
 .doc-slide {
   flex: 0 0 91% !important;
   width: 91% !important;
+  scroll-snap-align: center !important;
 }
 .card {
   min-height: clamp(475px, 66dvh, 585px) !important;
@@ -635,6 +637,8 @@ main { z-index: 2 !important; background: transparent !important; }
 /* 2. Піднімаємо картку вище (було 145px -> стало 112px) */
 .stage {
   padding-top: 112px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* 3. Пропорції внутрішніх елементів під зменшений на 0.05 розмір */
