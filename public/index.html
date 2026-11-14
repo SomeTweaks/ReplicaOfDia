@@ -695,6 +695,15 @@ main { z-index: 2 !important; background: transparent !important; }
   padding-top: 12px !important;
   padding-bottom: 18px !important;
 }
+/* 1. Трохи насиченіший блакитний фон */
+.g-doc, .g-feed, .g-me {
+  background: linear-gradient(180deg, #7AA4D0 0%, #94B7DB 38%, #A9C6E0 72%, #B5CFE0 100%) !important;
+}
+
+/* 2. Піднімаємо нижній таббар на 20px вище */
+.tabbar {
+  padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;
+}
 
 
 </style>
