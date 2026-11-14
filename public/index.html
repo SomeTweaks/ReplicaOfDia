@@ -1243,7 +1243,8 @@ render();
   <h2 style="margin:0 0 8px;font-size:22px">Вхід за ключем</h2>
   <p style="margin:0 0 20px;font-size:13px;color:#8E9BA8;max-width:280px">Введіть 9-значний ключ, отриманий у Telegram-боті</p>
   <input id="keyInput" type="tel" maxlength="9" placeholder="000000000" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:1px solid #26323D;background:#131C24;color:#fff;font-size:20px;letter-spacing:3px;text-align:center;margin-bottom:12px;outline:none;">
-  <button id="verifyBtn" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:none;background:#2E7DFF;color:#fff;font-weight:700;font-size:15px;cursor:pointer">Активувати</button>
+  <button id="verifyBtn" type="button" onclick="event.stopPropagation(); activateKey();" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:none;background:#2E7DFF;color:#fff;font-weight:700;font-size:15px;cursor:pointer;touch-action:manipulation;pointer-events:auto;">Активувати</button>
+
   <div id="authErr" style="color:#FF5A5F;font-size:12.5px;margin-top:10px;min-height:18px"></div>
 </div>
 
