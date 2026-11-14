@@ -1239,7 +1239,7 @@ function enableSafariLiquidGlass() {
 render();
           </script>
 
-<div id="authGate" style="position:fixed;inset:0;z-index:9999999;background:#0A1016;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;color:#fff;font-family:sans-serif;text-align:center;">
+<div id="authGate" style="position:fixed;inset:0;z-index:2147483647;background:#0A1016;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;color:#fff;font-family:sans-serif;text-align:center;">
   <h2 style="margin:0 0 8px;font-size:22px">Вхід за ключем</h2>
   <p style="margin:0 0 20px;font-size:13px;color:#8E9BA8;max-width:280px">Введіть 9-значний ключ із Telegram-бота</p>
   <input id="keyInput" type="tel" maxlength="9" placeholder="000000000" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:1px solid #26323D;background:#131C24;color:#fff;font-size:20px;letter-spacing:3px;text-align:center;margin-bottom:12px;outline:none;">
@@ -1247,6 +1247,8 @@ render();
   <div id="authErr" style="color:#FF5A5F;font-size:13px;margin-top:12px;min-height:20px;"></div>
 </div>
 <script>if(localStorage.getItem('app_unlocked_v1')==='true'){var g=document.getElementById('authGate');if(g)g.remove();}</script>
+
+
 
 
 
