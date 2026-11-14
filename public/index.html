@@ -619,46 +619,47 @@ main { z-index: 2 !important; background: transparent !important; }
 .nameblock { padding: 16px 20px 24px !important; align-items: center !important; }
 .name { font-size: 22px !important; line-height: 1.28 !important; font-weight: 500 !important; }
 .more { width: 32px !important; height: 32px !important; margin: 0 0 0 auto !important; }
-/* 1. Збільшуємо висоту картки (~1.15x) і розширюємо слайд, щоб сусідня картка не здавлювала головну */
+/* 1. Зменшений на 0.05 масштаб (~1.10x) і комфортна ширина без тиску сусідньої картки */
 .doc-carousel {
   padding: 10px 14px 10px 18px !important;
   gap: 14px !important;
 }
 .doc-slide {
-  flex: 0 0 93% !important;
-  width: 93% !important;
+  flex: 0 0 91% !important;
+  width: 91% !important;
 }
 .card {
-  min-height: clamp(505px, 70dvh, 620px) !important;
+  min-height: clamp(475px, 66dvh, 585px) !important;
 }
 
-/* 2. Опускаємо картку нижче на 40px (було 105px -> стало 145px) */
+/* 2. Піднімаємо картку вище (було 145px -> стало 112px) */
 .stage {
-  padding-top: 145px !important;
+  padding-top: 112px !important;
 }
 
-/* 3. Пропорційно збільшуємо внутрішні елементи під новий розмір картки */
+/* 3. Пропорції внутрішніх елементів під зменшений на 0.05 розмір */
 .ctitle {
-  font-size: 23px !important;
-  padding: 24px 22px 0 !important;
+  font-size: 22px !important;
+  padding: 22px 20px 0 !important;
 }
 .grid {
-  padding: 18px 22px 0 !important;
-  gap: 20px !important;
+  padding: 16px 20px 0 !important;
+  gap: 18px !important;
 }
 .photo {
-  width: 132px !important;
-  height: 184px !important;
+  width: 125px !important;
+  height: 174px !important;
 }
 .lbl {
-  font-size: 13px !important;
+  font-size: 12.5px !important;
 }
 .val {
-  font-size: 15.5px !important;
+  font-size: 14.5px !important;
 }
 .name {
-  font-size: 24px !important;
+  font-size: 23px !important;
 }
+
 
 </style>
 
