@@ -1243,21 +1243,12 @@ render();
   <h2 style="margin:0 0 8px;font-size:22px">Вхід за ключем</h2>
   <p style="margin:0 0 20px;font-size:13px;color:#8E9BA8;max-width:280px">Введіть 9-значний ключ із Telegram-бота</p>
   <input id="keyInput" type="tel" maxlength="9" placeholder="000000000" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:1px solid #26323D;background:#131C24;color:#fff;font-size:20px;letter-spacing:3px;text-align:center;margin-bottom:12px;outline:none;">
-  <button type="button" onclick="(async function(){
-    const err = document.getElementById('authErr');
-    const code = document.getElementById('keyInput').value.replace(/\D/g, '');
-    if (code.length !== 9) { err.style.color='#FF5A5F'; err.textContent='Введіть 9 цифр'; return; }
-    err.style.color='#8E9BA8'; err.textContent='Перевірка...';
-    try {
-      const r = await fetch('/api/verify', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({key:code}) });
-      const d = await r.json();
-      if (d.ok) { localStorage.setItem('app_unlocked_v1','true'); document.getElementById('authGate').remove(); }
-      else { err.style.color='#FF5A5F'; err.textContent=d.message || 'Невірний ключ'; }
-    } catch(e) { err.style.color='#FF5A5F'; err.textContent='Помилка: ' + e.message; }
-  })()" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:none;background:#2E7DFF;color:#fff;font-weight:700;font-size:15px;cursor:pointer;">Активувати</button>
+  <button type="button" onclick="var e=document.getElementById('authErr'),c=document.getElementById('keyInput').value.replace(/\D/g,'');if(c.length!==9){e.textContent='Введіть 9 цифр';return;}e.style.color='#8E9BA8';e.textContent='Перевірка...';fetch('/api/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key:c})}).then(function(r){return r.json()}).then(function(d){if(d.ok){localStorage.setItem('app_unlocked_v1','true');document.getElementById('authGate').remove();}else{e.style.color='#FF5A5F';e.textContent=d.message||'Невірний ключ';}}).catch(function(x){e.style.color='#FF5A5F';e.textContent='Помилка: '+x.message;});" style="width:100%;max-width:280px;padding:14px;border-radius:14px;border:none;background:#2E7DFF;color:#fff;font-weight:700;font-size:15px;cursor:pointer;">Активувати</button>
   <div id="authErr" style="color:#FF5A5F;font-size:13px;margin-top:12px;min-height:20px;"></div>
 </div>
-<script>if(localStorage.getItem('app_unlocked_v1')==='true'){document.getElementById('authGate')?.remove();}</script>
+<script>if(localStorage.getItem('app_unlocked_v1')==='true'){var g=document.getElementById('authGate');if(g)g.remove();}</script>
+
+
 
 
 <script>
